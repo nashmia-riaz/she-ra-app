@@ -14,10 +14,10 @@
 
 body{
   --background: #99343e;
+  --background-secondary: rgb(19, 18, 20);
   --text-secondary: #fae8c9;
   --text-primary: #d9a04a;
   
-  background-color: var(--background);
   color: var(--text-secondary);
 
   font-family: 'She-Ra-Font', sans-serif;
@@ -106,11 +106,13 @@ body{
   transition: 0.5s;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
-  /* padding: 1em 0.5em; */
   margin: 1em;
   font-size: 1.2em;
   
   flex: 1 1 20%;
+
+  background-color: var(--background-secondary);
+  border: 1px solid var(--text-secondary);
 
 }
 
@@ -131,4 +133,48 @@ body{
   object-fit: cover;
   object-position: top;
   width: 100%; height: 200px;
+  background-color: var(--background);
+}
+
+.HomePage{
+  padding: 5% 0;
+}
+
+.searchInput{
+  margin: 0 auto;
+  display: block;
+}
+a {
+  color: white; text-decoration: none;
+}
+
+.pagination{
+  margin-top: 3em;
+  display: block;
+  width: 100%;
+}
+.pagination>li{
+  display: inline;
+}
+.pagination>li>a{
+  padding: 1em;
+  background-color: var(--background-secondary);
+  margin: 1em;
+  border-radius: 1em;
+}
+.pagination>li>a:hover{
+  cursor: pointer;
+}
+.active>a:hover{
+  cursor:default!important;
+  color: var(--text-secondary);
+}
+@media (max-width: 768px) {
+  .pagination {font-size: 12px}
+
+  .next,
+  .prev {display: none}
+}
+@media (max-width: 768px) {
+  .pagination {font-size: 14px}
 }

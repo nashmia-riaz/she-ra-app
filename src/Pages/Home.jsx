@@ -5,8 +5,9 @@ import "../App.css"
 
 function Home(){
     return (
-        <div>
-        <img className="navbarLogo" src={Logo}></img>
+        <div className='HomePage'>
+            <img className="navbarLogo" src={Logo}></img>
+            <input type="text" name="searchInput" className="searchInput" />
             <div className="Container">
                 <Sidebar></Sidebar>
                 <MainPage></MainPage>
