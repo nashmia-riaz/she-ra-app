@@ -161,19 +161,28 @@ a {
   background-color: var(--background-secondary);
   margin: 1em;
   border-radius: 1em;
+}.pagination>li>a:hover{
+  color: var(--text-primary);
 }
 .pagination>li>a:hover{
   cursor: pointer;
+}
+.active>a{
+  background-color: #99343e!important;
 }
 .active>a:hover{
   cursor:default!important;
   color: var(--text-secondary);
 }
+.next>a,
+.prev>a {
+  background-color: #99343e!important;}
 @media (max-width: 768px) {
   .pagination {font-size: 12px}
 
   .next,
-  .prev {display: none}
+  .prev {display: none;
+    background-color: #99343e!important;}
 }
 @media (max-width: 768px) {
   .pagination {font-size: 14px}
