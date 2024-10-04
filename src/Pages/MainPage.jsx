@@ -1,7 +1,8 @@
 import Card from "./Card";
 import { useEffect, useState } from "react";
-import axios, { all } from "axios";
+import axios from "axios";
 import ReactPaginate from "react-paginate";
+import { useNavigate } from "react-router-dom";
 
 function MainPage(){
     const api = "https://she-raandtheprincessesofpower.fandom.com/api.php";
@@ -12,6 +13,7 @@ function MainPage(){
     const itemsPerPage = 8;
     const [pageCount, setPageCount]=useState(0);
     const [searchTerm, SetSearchTerm] = useState('');
+    const navigate = useNavigate();
 
     const addCharacter = (src, id)=>{
         setAllCharacters((prevCharacters)=>{
@@ -113,12 +115,11 @@ function MainPage(){
         setCharactersTemp(filteredPages);
         resetCurrentCharacters(filteredPages);
     }
-
     return(
     <div>
         <input type="text" placeholder="Search" value={searchTerm} name="searchInput" className="searchInput" onChange={(event)=>SearchCharacter(event.target.value)}/><div className="MainPage">
         {pageCharacters.map((character) => {
-            return <Card className="CharacterCard" key={character.pageid} data={{img: character.src, name: character.title}}/>
+            return <Card className="CharacterCard" key={character.pageid} data={{img: character.src, name: character.title, ID: character.pageid}}/>
         })}
         <ReactPaginate
             className="pagination justify-content-center my-4 gap-4"

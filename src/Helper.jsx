@@ -4,4 +4,8 @@ function trimString(str, match){
     return index !== -1 ? str.substring(0, index+match.length) : str;
 }
 
-export default {trimString};
+const references = {
+    baseURL: '/she-ra-app'
+  };
+  
+export default {trimString, references};
