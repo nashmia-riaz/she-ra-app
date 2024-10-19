@@ -84,6 +84,7 @@ body{
   flex-grow: 1;
   flex-shrink: 1;
 
+  margin: 0 auto;
 
 }
 
@@ -98,7 +99,6 @@ body{
 }
 
 .Container>div{
-
   flex-shrink: 1; flex-grow: 1;
   padding: 1em;
   box-sizing: border-box;
@@ -112,8 +112,8 @@ body{
   margin: 1em;
   font-size: 1.2em;
   
-  flex-basis: 20%;
-  max-width: 20%;
+  flex-basis: 21%;
+  max-width: 25%;
   min-width: 20%;
   height: 40%;
   box-sizing: border-box;
@@ -185,6 +185,50 @@ a {
 .active>a:hover{
   cursor:default!important;
   color: var(--text-secondary);
+}
+
+.characterInfo{
+  font-family: 'Monsterrat', sans-serif;
+}
+h3{
+  font-family: 'She-Ra-Font', sans-serif;
+  color: var(--text-primary);
+}
+
+.characterContainer, .characterSectionsContainer{
+  display: flex;
+  flex-direction: row;
+}
+.characterContainer{
+  justify-content: center;
+  align-items: center;
+}
+.characterSectionsContainer{
+  display: flex;
+  width: 80vw;
+}
+.characterContainer>div{
+  margin: 2em;
+
+  box-sizing: border-box;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.characterSectionsContainer>div{
+  font-family: 'Monsterrat', sans-serif;
+  flex-basis: 25%;
+  /* max-width: 33%; */
+  /* min-width: 20%; */
+  box-sizing: border-box;
+  flex-grow: 1;
+
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-color: var(--background-secondary);
 }
 .next>a,
 .prev>a {

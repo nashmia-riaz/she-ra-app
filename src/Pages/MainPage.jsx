@@ -2,7 +2,6 @@ import Card from "./Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
-import { useNavigate } from "react-router-dom";
 
 function MainPage(){
     const api = "https://she-raandtheprincessesofpower.fandom.com/api.php";
@@ -13,7 +12,6 @@ function MainPage(){
     const itemsPerPage = 8;
     const [pageCount, setPageCount]=useState(0);
     const [searchTerm, SetSearchTerm] = useState('');
-    const navigate = useNavigate();
 
     const addCharacter = (src, id)=>{
         setAllCharacters((prevCharacters)=>{

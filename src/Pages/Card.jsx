@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Helper from "../Helper";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +19,7 @@ function Card(props){
     );
 
     const LoadCard = (ID)=>{
-        navigate(Helper.references.baseURL + '/Character', {state: {characterID: props.data.ID}} );
+        navigate(Helper.references.baseURL + `/Character/${props.data.name}`);
     }
 
 

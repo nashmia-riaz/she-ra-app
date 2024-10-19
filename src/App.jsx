@@ -10,7 +10,7 @@ function App() {
     <div className="App">
     <Routes>
         <Route path={Helper.references.baseURL} element={<Home></Home>}></Route>
-        <Route path={Helper.references.baseURL + "/Character"} element={<Character></Character>}></Route>
+        <Route path={Helper.references.baseURL + "/Character/:id"} element={<Character></Character>}></Route>
     </Routes>
     </div>
   )
